@@ -1,5 +1,5 @@
 import tweepy
-from textblob import textblob
+from textblob import TextBlob
 
 # authentication
 consumer_key = 'enter your consumer key'
@@ -14,7 +14,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # retrieves a list of tweets with specified key word
-public_tweets = api.search('A24')
+public_tweets = api.search_tweets('key')
 
 for tweet in public_tweets:
 	print(tweet.text)
@@ -22,5 +22,3 @@ for tweet in public_tweets:
 	# performs sentiment analysis on tweet
 	analysis = TextBlob(tweet.text)
 	print(analysis.sentiment)
-    print ('Polarity: ', analysis.sentiment.polarity)
-    print ('Subjectivity:', analysis.sentiment.subjectivity)
