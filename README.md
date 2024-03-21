@@ -3,4 +3,4 @@
 - textblob (https://textblob.readthedocs.io/en/dev/)
 
 ##Usage
-- Run via terminal python3 twitter-sentiment-analysis.py
+- Run via terminal python3 text-sentiment-analysis.py
